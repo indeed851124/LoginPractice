@@ -2,6 +2,7 @@ package com.cnc.loginpractice
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.cnc.loginpractice.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -16,6 +17,14 @@ class MainActivity : AppCompatActivity() {
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.loginBtn.setOnClickListener {
+            if(binding.idText.text.toString() == "admin@test.com" && binding.pwText.text.toString()=="qwer") {
+                Toast.makeText(this,"관리자입니다",Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(this,"로그인실패",Toast.LENGTH_SHORT).show()
+            }
+            
+        }
 
     }
 }
