@@ -19,7 +19,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.loginBtn.setOnClickListener {
             if(binding.idText.text.toString() == "admin@test.com" && binding.pwText.text.toString()=="qwer") {
-                Toast.makeText(this,"관리자입니다",Toast.LENGTH_SHORT).show()
+                val name = "강호"
+                Toast.makeText(this,"${name} 관리자입니다",Toast.LENGTH_SHORT).show()
             }else{
                 Toast.makeText(this,"로그인실패",Toast.LENGTH_SHORT).show()
             }
